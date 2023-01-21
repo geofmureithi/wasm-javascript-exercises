@@ -11,7 +11,7 @@ function fibonacci(term) {
   return fib.pop();
 }
 
-//export default fibonacci
+export default fibonacci
 let result = fibonacci(9)
 
 console.log(result)
