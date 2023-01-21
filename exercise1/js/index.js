@@ -1,20 +1,20 @@
 function fibonacci(term) {
-    /// impl this function without using recursion
-    if (term <= 0) {
+    let a = 1;
+    let b = 1;
+
+    if (term === 0) {
         return 0;
     }
 
-    let a = 0;
-    let b = 1;
-    let c = 0;
-
-    for (let i = 2; i <= term; i++) {
-        c = a + b;
+    for (let i = 2; i < term; i++) {
+        const c = a + b;
         a = b;
         b = c;
     }
 
-    return c;
+    
+
+    return b;
 
 }
 
