@@ -16,6 +16,12 @@ Expected Outcome: The .wasm file will be imported and called, and there will be 
 
 4 marks
 
+## Solution
+Run:
+```
+cp ./exercise1/rust/pkg/rust_fibonacci_bg.wasm ./exercise2/rust_fibonacci.wasm
+python3 -m pytest test_fib.py
+```
 
 ## Further reading
 [Awesome WebAssembly Runtimes](https://github.com/appcypher/awesome-wasm-runtimes)
