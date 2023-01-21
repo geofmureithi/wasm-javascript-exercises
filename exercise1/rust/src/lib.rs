@@ -1,13 +1,16 @@
 use wasm_bindgen::prelude::*;
 
-
-
 #[wasm_bindgen]
 pub fn fibonacci(term: u32) -> u32 {
     // TODO: add logic here
-    term
+    if term <= 0 {
+        return 0;
+    } else if term == 1 {
+        return 1;
+    } else {
+        return fibonacci(term - 1) + fibonacci(term - 2);
+    }
 }
-
 
 #[cfg(test)]
 mod tests {
