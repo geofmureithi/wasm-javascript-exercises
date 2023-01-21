@@ -17,7 +17,7 @@ function fibonacci(term) {
         sum+=sequence[j];
 
     }
-    console.log(next_num);
+    // console.log(next_num);
 
     return next_num;
 
