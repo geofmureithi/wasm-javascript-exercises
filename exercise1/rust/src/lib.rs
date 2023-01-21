@@ -5,7 +5,13 @@ use wasm_bindgen::prelude::*;
 #[wasm_bindgen]
 pub fn fibonacci(term: u32) -> u32 {
     // TODO: add logic here
-    term
+
+
+    match term {
+        0 => 1,
+        1 => 1,
+        _ => fibonacci(term - 1) + fibonacci(term - 2),
+    }
 }
 
 
