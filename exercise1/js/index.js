@@ -8,16 +8,6 @@ function fibonacci(term) {
     }
 }
 
-// take nth term input from the user
-const nTerms = prompt('Enter the termber of terms: ');
 
-if(nTerms <=0) {
-    console.log('Enter a positive integer.');
-}
-else {
-    for(let i = 0; i < nTerms; i++) {
-        console.log(fibonacci(i));
-    }
-}
 
 export default fibonacci
