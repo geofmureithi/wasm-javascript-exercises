@@ -1,0 +1,31 @@
+[package]
+name = "exercise3"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hirola = { version = "0.2", features=["form"]}
+wasm-bindgen = {version = "0.2"}
+
+[dependencies.web-sys]
+features = [
+  "console",
+  "Comment",
+  "Document",
+  "DocumentFragment",
+  "Element",
+  "Event",
+  "HtmlElement",
+  "Node",
+  "Text",
+  "Window",
+]
+
+version = "0.3"
+
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.0"
+hirola = { version = "0.2", default-features=false, features =["router", "global-state", "ssr"]}
