@@ -1,13 +1,14 @@
 function fibonacci(term) {
     // TODO: Add code here
     var sequence = [];
+    let next_num = 0;
 
     sequence.push(0);
     sequence.push(1);
 
 
     for (var i = 2; i <= term; i++) {
-        var next_num = (sequence[i - 1] + sequence[i - 2]);
+        next_num = (sequence[i - 1] + sequence[i - 2]);
 
         sequence.push(next_num);
 
