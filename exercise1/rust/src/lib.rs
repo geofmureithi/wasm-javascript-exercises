@@ -4,8 +4,15 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn fibonacci(term: u32) -> u32 {
-    // TODO: add logic here
-    term
+    let mut a = 0;
+    let mut b = 1;
+    if term == 0 { return a; }
+    for _ in 2..=term {
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+    b
 }
 
 
