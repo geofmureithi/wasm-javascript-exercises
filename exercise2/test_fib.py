@@ -3,12 +3,12 @@ import wasmtime.loader
 
 # Assuming `rust_fibonacci.wasm` is in the python load path...
 # ?? import file
+from exercise1.rust import fibonacci
 
 # Fibonacci implementation from wasm file 
 # See also https://mureithi.me/blog/the-perfect-tribonacci-sequence
 def fibonacci(n):
-    # ?? Call our wasm file here
-    return n 
+    return fibonacci(n)
 
 def test_fib():
     assert(fibonacci(5) == 5)
