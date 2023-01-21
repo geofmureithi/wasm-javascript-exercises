@@ -1,6 +1,6 @@
 use hirola::prelude::*;
 
-fn counter(_app: &HirolaApp) -> Dom {
+fn counter<'a>(_app: &'a HirolaApp) -> Dom {
     let count = Signal::new(5);
     html! {
         <div>
