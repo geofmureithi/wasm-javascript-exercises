@@ -11,15 +11,14 @@ function fibonacci(term) {
         next_num = (sequence[i - 1] + sequence[i - 2]);
 
         sequence.push(next_num);
-
     }
    
 
-    console.log(next_num);
+    // console.log(next_num);
     return next_num;
 
    
 }
 
-// export default fibonacci;
-fibonacci(9);
+export default fibonacci;
+// fibonacci(10);
