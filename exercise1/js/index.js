@@ -15,11 +15,11 @@ function fibonacci(term) {
     }
    
 
-    // console.log(next_num);
+    console.log(next_num);
     return next_num;
 
    
 }
 
-export default fibonacci;
-// fibonacci(9);
+// export default fibonacci;
+fibonacci(9);
