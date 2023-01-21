@@ -18,4 +18,4 @@ function fibonacci(term) {
 
 }
 
-export default fibonacci
+module.exports = fibonacci
