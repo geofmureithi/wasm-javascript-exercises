@@ -10,7 +10,6 @@ function fibonacci(term) {
         var next_num = (sequence[i - 1] + sequence[i - 2]);
 
         sequence.push(next_num);
-        // console.log(sequence);
 
     }
     var sum = 0;
@@ -18,14 +17,12 @@ function fibonacci(term) {
         sum+=sequence[j];
 
     }
-    console.log(sequence);
+    console.log(next_num);
 
-    return sum;
+    return next_num;
 
-    // let sum = sequence.join();
-    // console.log(sum);
-    // return sum;
+   
 }
 
 export default fibonacci;
-// fibonacci(10);
+// fibonacci(9);
