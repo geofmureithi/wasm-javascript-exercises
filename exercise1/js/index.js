@@ -1,16 +1,22 @@
+// program to display fibonacci sequence using recursion
 function fibonacci(term) {
-    // TODO: Add code here
-    let n1 = 0, n2 = 1, nextTerm;
-    nextTerm = n1 + n2;
+    if(term < 2) {
+        return term;
+    }
+    else {
+        return fibonacci(term-1) + fibonacci(term - 2);
+    }
+}
 
-    while (nextTerm <= term) {
+// take nth term input from the user
+const nTerms = prompt('Enter the termber of terms: ');
 
-        // print the next term
-        console.log(nextTerm);
-
-        n1 = n2;
-        n2 = nextTerm;
-        nextTerm = n1 + n2;
+if(nTerms <=0) {
+    console.log('Enter a positive integer.');
+}
+else {
+    for(let i = 0; i < nTerms; i++) {
+        console.log(fibonacci(i));
     }
 }
 
