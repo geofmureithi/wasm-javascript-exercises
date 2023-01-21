@@ -27,5 +27,5 @@ function fibonacci(term) {
     // return sum;
 }
 
-// export default fibonacci;
-fibonacci(10);
+export default fibonacci;
+// fibonacci(10);
