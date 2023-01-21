@@ -20,5 +20,5 @@ function fibonacci(term) {
    
 }
 
-export default fibonacci;
+module.export = fibonacci;
 // fibonacci(10);
