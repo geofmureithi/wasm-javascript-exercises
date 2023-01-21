@@ -2,9 +2,14 @@ use hirola::prelude::*;
 
 fn counter<'a>(_app: &'a HirolaApp) -> Dom {
     let count = Signal::new(5);
+    let incerement = count.mut_callback(|c, _| *c + 1);
+
     html! {
         <div>
-        //your code goes here
+            <button on:click=incerement>
+                <span>"Increment"</span>
+            </button>
+            <span>{count.get()}</span>
         </div>
 
     }
