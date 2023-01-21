@@ -33,9 +33,9 @@ Its also a chance to bring up a chance to talk about Rust :).
 
 In a goal to make this session interactive, we are going to look at some exercises.
 These exercises will each tackle a specific concept:
-Exercise 1: Basics and how fast is WASM?
-Exercise 2: How would one run .wasm files in other platforms?
-Exercise 3: Can you build complex UIs in WASM?
+- Exercise 1: Basics and how fast is WASM?
+- Exercise 2: How would one run .wasm files in other platforms?
+- Exercise 3: Can you build complex UIs in WASM?
 
 
 ## Requirements:
