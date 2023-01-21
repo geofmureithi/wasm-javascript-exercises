@@ -12,3 +12,5 @@ Expected Outcome: Running `wasm-pack test --node` results in passing on running 
 Marks: 10,
 
 ## Further Reading
+
+[Trunk](https://trunkrs.dev/) Shipping of wasm projects for web
