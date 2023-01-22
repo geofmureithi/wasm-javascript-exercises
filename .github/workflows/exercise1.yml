@@ -14,3 +14,13 @@ jobs:
           override: true
       - run: cargo test
         working-directory: exercise1/rust
+      - name: Write data to DB
+        if: success()
+        env:
+          PGHOST: ${{ secrets.DB_HOST }}
+          PGPORT: ${{ secrets.DB_PORT }}
+          PGUSER: ${{ secrets.DB_USER }}
+          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
+          PGDATABASE: ${{ secrets.DB_NAME }}
+        run: |
+        psql -c "INSERT INTO scoreboard (team, exercise) VALUES ('team2',2);"
