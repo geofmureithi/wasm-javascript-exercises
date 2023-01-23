@@ -1,0 +1,12 @@
+{
+  "name": "exercise1",
+  "version": "1.0.0",
+  "description": "The theme here is to get ourselves introduced to WASM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
