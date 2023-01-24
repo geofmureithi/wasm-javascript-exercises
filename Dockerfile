@@ -30,12 +30,6 @@ RUN apt-get install libpq-dev
 # Install diesel cli
 RUN cargo install diesel_cli --no-default-features --features postgres
 
-# Run diesel setup
-RUN diesel setup
-
-# Run diesel migrate
-RUN diesel migration run
-
 # Build the code with cargo
 RUN cargo build --release --manifest-path /usr/src/wasm-exercises/Cargo.toml
 
@@ -47,6 +41,12 @@ EXPOSE 8080
 # Install the binary
 WORKDIR /usr/src/wasm-exercises
 RUN cargo install --path .
+
+# Run diesel setup
+RUN diesel setup
+
+# Run diesel migrate
+RUN diesel migration run
 
 # Run
 CMD ["wasm-javascript-exercises"]
