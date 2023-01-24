@@ -1,6 +1,6 @@
 name: Exercise 3
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
@@ -13,3 +13,24 @@ jobs:
 
       - run: wasm-pack test --node
         working-directory: exercise3
+
+  write_to_db: 
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Install postgresql
+        run: |
+          sudo apt update
+          sudo apt install postgresql postgresql-contrib
+          sudo systemctl start postgresql.service
+
+      - name: Write data to DB
+        env:
+          PGHOST: ${{ secrets.PGHOST }}
+          PGPORT: ${{ secrets.PGPORT }}
+          PGUSER: ${{ secrets.PGUSER }}
+          PGPASSWORD: ${{ secrets.PGPASSWORD }}
+          PGDATABASE: ${{ secrets.PGDATABASE }}
+        run: |
+          echo Writing team name and exercise to db
+          psql -c "INSERT INTO scoreboard (team, exercise) VALUES ('${GITHUB_REF##*/}',3) ON CONFLICT DO NOTHING;"    

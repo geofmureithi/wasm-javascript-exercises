@@ -1,6 +1,6 @@
 name: Exercise 2
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -25,3 +25,24 @@ jobs:
         run:
           python3 -m pytest test_fib.py 
         working-directory: exercise2
+
+  write_to_db: 
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Install postgresql
+        run: |
+          sudo apt update
+          sudo apt install postgresql postgresql-contrib
+          sudo systemctl start postgresql.service
+
+      - name: Write data to DB
+        env:
+          PGHOST: ${{ secrets.PGHOST }}
+          PGPORT: ${{ secrets.PGPORT }}
+          PGUSER: ${{ secrets.PGUSER }}
+          PGPASSWORD: ${{ secrets.PGPASSWORD }}
+          PGDATABASE: ${{ secrets.PGDATABASE }}
+        run: |
+          echo Writing team name and exercise to db
+          psql -c "INSERT INTO scoreboard (team, exercise) VALUES ('${GITHUB_REF##*/}',2) ON CONFLICT DO NOTHING;" 
