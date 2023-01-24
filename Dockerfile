@@ -42,12 +42,6 @@ EXPOSE 8080
 WORKDIR /usr/src/wasm-exercises
 RUN cargo install --path .
 
-# Run diesel setup
-RUN diesel setup
-
-# Run diesel migrate
-RUN diesel migration run
-
 # Run
 CMD ["wasm-javascript-exercises"]
 
