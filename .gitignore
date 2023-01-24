@@ -3,6 +3,7 @@ exercise1/rust/target/
 exercise3/target/
 exercise2/__pycache__/
 
+.env
 
 # Added by cargo
 
