@@ -2,3 +2,12 @@ exercise1/rust/pkg/
 exercise1/rust/target/
 exercise3/target/
 exercise2/__pycache__/
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1deebf864c277a95f18106a3ccddf76ffe6e651f
+.env
+
+# Added by cargo
+
+/target
