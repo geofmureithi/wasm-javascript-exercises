@@ -1,6 +1,6 @@
 # WASM & JS Talk and exercises
 
-By Njuguna Mureithi @tweetofnjuguna
+Talk given to React.js Nairobi group By Njuguna Mureithi @tweetofnjuguna
 
 ## Introduction
 
