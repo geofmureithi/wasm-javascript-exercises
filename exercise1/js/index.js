@@ -1,5 +1,21 @@
 function fibonacci(term) {
-    // TODO: Add code here
+    let a = 1;
+    let b = 1;
+
+    if (term === 0) {
+        return 0;
+    }
+
+    for (let i = 2; i < term; i++) {
+        const c = a + b;
+        a = b;
+        b = c;
+    }
+
+    
+
+    return b;
+
 }
 
-export default fibonacci
+module.exports = fibonacci
