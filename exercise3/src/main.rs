@@ -4,7 +4,8 @@ fn counter<'a>(_app: &'a HirolaApp) -> Dom {
     let count = Signal::new(5);
     html! {
         <div>
-        //your code goes here
+            <button><span>{"Increment"}</span></button>
+            <span>{count.get()}</span>
         </div>
 
     }
